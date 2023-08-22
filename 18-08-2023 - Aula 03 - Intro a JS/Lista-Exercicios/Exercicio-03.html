@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<span>Digite o seu time do coração</span>
+		<input id="inputTime" type="text" />
+		<br />
+		<span>Digite quantos mundiais seu time tem</span>
+		<input id="inputMundiais" type="number" />
+		<br />
+		<button id="loveTeamBtn" onclick="loveTeam()">Amo meu time!</button>
+	</body>
+</html>
+
+<script>
+	function loveTeam() {
+		alert(
+			`O time ${inputTime.value} tem ${inputMundiais.value} mundiais da FIFA`
+		);
+	}
+</script>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<span>Digite o seu peso (em Kg)</span>
+		<input id="inputPeso" type="number" />
+		<br />
+		<span>Digite aqui a sua altura (em cm)</span>
+		<input id="inputAltura" type="number" />
+		<br />
+		<button id="AlertBtn" onclick="Alert()">Fale Comigo</button>
+	</body>
+</html>
+
+<script>
+	function Alert() {
+		alert(`Você pesa ${inputPeso.value} e tem ${inputAltura.value} de altura.`);
+	}
+</script>

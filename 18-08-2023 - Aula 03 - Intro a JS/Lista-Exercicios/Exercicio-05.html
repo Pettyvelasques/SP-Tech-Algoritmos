@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<span>Digite a sua idade</span>
+		<input id="inputIdade" type="number" />
+		<br />
+		<button id="enderecoBtn" onclick="calcularAposentariaH()">
+			Aposentadoria Homem
+		</button>
+		<br />
+		<button id="enderecoBtn" onclick="calcularAposentariaM()">
+			Aposentadoria Mulher
+		</button>
+	</body>
+</html>
+
+<script>
+	function calcularAposentariaH() {
+		alert(`Faltam ${70 - inputIdade.value} anos para você se aposentar`);
+	}
+	function calcularAposentariaM() {
+		alert(`Faltam ${60 - inputIdade.value} anos para você se aposentar`);
+	}
+</script>

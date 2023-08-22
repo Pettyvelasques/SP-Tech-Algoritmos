@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<span>Digite o seu endereço</span>
+		<input id="inputEndereco" type="text" />
+		<br />
+		<span>Digite o número</span>
+		<input id="inputNumero" type="number" />
+		<br />
+		<button id="enderecoBtn" onclick="mostrarEndereco()">Onde eu moro</button>
+	</body>
+</html>
+
+<script>
+	function mostrarEndereco() {
+		alert(`Seu logradouro é ${inputEndereco.value}`);
+		alert(`O número do seu logradouro é ${inputNumero.value}`);
+	}
+</script>

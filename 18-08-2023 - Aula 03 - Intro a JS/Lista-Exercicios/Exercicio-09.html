@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<span>Digite o nome do aluno</span>
+		<input type="text" id="inputNome" />
+		<br />
+		<span>Digite a nota da Avaliação Continuada</span>
+		<input type="text" id="inputContinuada" />
+		<br />
+		<span>Digite a nota da Avaliação Semestral</span>
+		<input type="text" id="inputSemestral" />
+		<br />
+		<button id="calcularNotaBtn" onclick="calcularNota()">
+			Calcular Média
+		</button>
+	</body>
+</html>
+
+<script>
+	function calcularNota() {
+		alert(
+			`A média de ${inputNome.value} será de ${
+				inputContinuada.value * 0.4 + inputSemestral.value * 0.6
+			}`
+		);
+	}
+</script>
