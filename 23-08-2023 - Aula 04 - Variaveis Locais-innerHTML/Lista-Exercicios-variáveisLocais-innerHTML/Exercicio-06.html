@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<span>Insira o Ki do guerreiro Sayajin</span>
+		<input type="number" id="kiGuerreiro" />
+		<br />
+		<span>Insira o Ki do guerreiro Sayajin</span>
+		<button id="ssjBtn" onclick="transformarSSJ()">SSJ</button>
+		<button id="ssj2Btn" onclick="transformarSSJ2()">SSJ 2</button>
+		<button id="ssj3Btn" onclick="transformarSSJ3()">SSJ 3</button>
+		<br />
+		<div class="" id="telaPoder"></div>
+	</body>
+</html>
+
+<script>
+	function transformarSSJ() {
+		var kiBase = Number(kiGuerreiro.value);
+		telaPoder.innerHTML = `Após se transformar em Super Sayajin, o ki desse Sayajin passa a ser de ${
+			kiBase * 50
+		}
+        `;
+	}
+	function transformarSSJ2() {
+		var kiBase = Number(kiGuerreiro.value);
+		telaPoder.innerHTML = `Após se transformar em Super Sayajin 2, o ki desse Sayajin passa a ser de ${
+			kiBase * 100
+		}
+        `;
+	}
+	function transformarSSJ3() {
+		var kiBase = Number(kiGuerreiro.value);
+		telaPoder.innerHTML = `Após se transformar em Super Sayajin 3, o ki desse Sayajin passa a ser de ${
+			kiBase * 200
+		}
+        `;
+	}
+</script>

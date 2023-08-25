@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span id="span_nota">Nota da continuada:</span>
+    <input type="number" id="input_nota_continuada"><br>
+    Nota da semestral:
+    <input type="number" id="input_nota_semestral"><br>
+    Nome do aluno:
+    <input id="input_nome_aluno"><br>
+    <button onclick="calcular_media()">
+        Calcular média
+    </button>
+
+    <div id="div_container">
+        <span>Olá mundo !</span>
+        <button>
+            Clica em mim !
+        </button>
+    </div>
+</body>
+</html>
+<script>
+    function calcular_media() {
+        var nomeAluno = input_nome_aluno.value;
+
+        var notaContinuada = Number(input_nota_continuada.value);
+
+        var notaSemestral = Number(input_nota_semestral.value);
+
+        var mediaAluno = notaContinuada * 0.40 + notaSemestral * 0.60;
+
+        var adjetivo = "violenta"
+        // var texto = "A raposa " + adjetivo + " pulou sobre o cachorro !";
+        var texto = `A raposa ${adjetivo} pulou sobre o cachorro !`;
+        /*
+        var texto = "Olá, eu sou o Goku !";
+        var texto = "Olá, eu sou o vêjêtá !";
+        */
+
+        alert(texto);
+
+        /*
+        alert(`A média de ${nomeAluno} será de ${mediaAluno}`);
+        */
+
+        /*
+        mediaAluno = 11;
+
+        alert(`A média perfeita seria de ${mediaAluno}`)
+        */
+    }
+</script>

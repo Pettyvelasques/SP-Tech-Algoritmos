@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<span>Insira o Peso (em Kg)</span>
+		<input type="number" id="inputPeso" />
+		<br />
+		<span>Insira a Altura (em metros)</span>
+		<input type="number" id="inputAltura" />
+		<br />
+		<button class="" id="imcBtn" onclick="calculoIMC()">Calcular IMC</button>
+		<br />
+		<div class="" id="telaIMC"></div>
+	</body>
+</html>
+
+<script>
+	function calculoIMC() {
+		var peso = Number(inputPeso.value);
+		var altura = Number(inputAltura.value);
+
+		telaIMC.innerHTML = `Seu IMC é de <b>${peso / (altura * altura)} kg/m2</b>
+        `;
+	}
+</script>

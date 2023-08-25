@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<span>Digite a quantidade de votos do Candidato A</span>
+		<input type="number" id="inputVotosA" /> <br />
+		<span>Digite a quantidade de votos do Candidato B</span>
+		<input type="number" id="inputVotosB" /> <br />
+		<span>Digite a quantidade de votos em branco</span>
+		<input type="number" id="inputVotosBranco" /> <br />
+		<span>Digite a quantidade de votos nulos</span>
+		<input type="number" id="inputVotosNulos" /> <br />
+		<button id="resultadoBtn" onclick="calcularEleicao()">
+			Resultado da Eleição
+		</button>
+		<div id="resultadoEleicao"></div>
+	</body>
+</html>
+
+<script>
+	function calcularEleicao() {
+		var votosA = Number(inputVotosA.value);
+		var votosB = Number(inputVotosB.value);
+		var votosInvalidos =
+			Number(inputVotosBranco.value) + Number(inputVotosNulos.value);
+		var totalVotos = votosA + votosB + votosInvalidos;
+		resultadoEleicao.innerHTML = `
+        Total de votos: ${totalVotos} <br>
+        Candidato A: ${(votosA / totalVotos) * 100}% (${votosA} votos) <br>
+        Candidato B: ${(votosB / totalVotos) * 100}% (${votosB} votos) <br>
+        Inválidos: ${
+					(votosInvalidos / totalVotos) * 100
+				}% (${votosInvalidos} votos)
+        `;
+	}
+</script>
