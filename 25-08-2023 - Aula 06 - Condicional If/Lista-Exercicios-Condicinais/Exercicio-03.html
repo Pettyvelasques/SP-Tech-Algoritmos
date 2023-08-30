@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<span>Insira o valor das notas</span>
+		<br />
+		<input type="number" id="nota01" />
+		<input type="number" id="nota02" />
+		<input type="number" id="nota03" />
+		<br />
+		<button onclick="calcularMedia()">Analisar desempenho</button>
+		<br />
+		<div id="mostraResultados"></div>
+	</body>
+</html>
+
+<script>
+	function calcularMedia() {
+		var nota1 = Number(nota01.value);
+		var nota2 = Number(nota02.value);
+		var nota3 = Number(nota03.value);
+		var media = (nota1 + nota2 + nota3) / 3;
+
+		mostraResultados.innerHTML = `Sua média foi de ${media}`;
+
+		if (media > 9.4) {
+			mostraResultados.innerHTML += `<br /> Parabéns, você é fora de série!`;
+		}
+	}
+</script>

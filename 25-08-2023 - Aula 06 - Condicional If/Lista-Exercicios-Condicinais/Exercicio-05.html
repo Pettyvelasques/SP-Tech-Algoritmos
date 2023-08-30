@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<span>Digite o consumo de kW/h do mês:</span>
+		<input type="number" id="inputConsumo" />
+		<br />
+		<button id="calcularBtn" onclick="calcularConta()">
+			Calcular conta de luz
+		</button>
+	</body>
+</html>
+
+<script>
+	function calcularConta() {
+		var consumo = Number(inputConsumo.value);
+		var valorConta = consumo * 0.85;
+
+		if (consumo >= 100) {
+			alert(`A sua conta é de ${valorConta}`);
+		}
+		if (consumo < 100) {
+			alert(`A sua conta é de ${valorConta * 0.9}`);
+		}
+	}
+</script>

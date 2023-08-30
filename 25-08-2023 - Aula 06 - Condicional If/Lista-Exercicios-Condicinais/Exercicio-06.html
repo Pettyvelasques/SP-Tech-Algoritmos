@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<span>Insira a renda familiar</span>
+		<input type="number" id="inputRenda" />
+		<br />
+		<span>Insira o valor da prestação</span>
+		<input type="number" id="inputPrestacao" />
+		<br />
+		<button onclick="calcularFinanciamento()">Verificar financiamento</button>
+		<br />
+		<div id="mostraValor"></div>
+	</body>
+</html>
+
+<script>
+	function calcularFinanciamento() {
+		var renda = Number(inputRenda.value);
+		var prestacao = Number(inputPrestacao.value);
+		var comprometimentoRenda = (prestacao / renda) * 100;
+
+		mostraValor.innerHTML = `A prestação corresponde a ${comprometimentoRenda}% da renda familiar`;
+
+		if (comprometimentoRenda > 30) {
+			mostraValor.innerHTML += `<br /> Será necessário complementar a renda familiar`;
+		}
+	}
+</script>

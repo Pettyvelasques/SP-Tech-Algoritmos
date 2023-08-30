@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<span>Qual o valor da pizza?</span>
+		<input type="number" id="valorPizza" />
+		<br />
+		<span>Insira a quantidade de amigos reunidos</span>
+		<input type="number" id="quantAmigos" />
+		<br />
+		<button onclick="calcularVaquinha()">Rola a pizza?</button>
+		<br />
+		<div id="mostraResultado"></div>
+	</body>
+</html>
+
+<script>
+	function calcularVaquinha() {
+		var valor = Number(valorPizza.value);
+		var amigos = Number(quantAmigos.value);
+		var custoInd = valor / amigos;
+
+		mostraResultado.innerHTML = `Cada amigo vai pagar R$${custoInd} pela pizza`;
+
+		if (custoInd > 20) {
+			mostraResultado.innerHTML += `<br /><b style="color: red"><i>Deu ruim! Pizza muito cara!</i></b>`;
+		}
+	}
+</script>

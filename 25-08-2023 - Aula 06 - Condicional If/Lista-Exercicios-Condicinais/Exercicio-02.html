@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<span
+			>Insira a quantidade de latinhas de refrigerante que você bebe por
+			dia</span
+		>
+		<input type="number" id="inputQuantidade" />
+		<br />
+		<button onclick="verificarConsumo()">Quantos refris?</button>
+		<br />
+		<div id="mostraConsumo"></div>
+	</body>
+</html>
+
+<script>
+	function verificarConsumo() {
+		var quantidade = Number(inputQuantidade.value);
+		var consumo = quantidade * 365;
+
+		mostraConsumo.innerHTML = `${consumo} latinhas por ano`;
+
+		if (consumo >= 500) {
+			mostraConsumo.innerHTML += `<br /> Cuidado com a diabetes!`;
+		}
+	}
+</script>
