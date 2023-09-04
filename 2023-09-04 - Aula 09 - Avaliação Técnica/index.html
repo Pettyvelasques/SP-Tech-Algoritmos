@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<span>Informe o consumo de kW/h</span>
+		<input type="number" id="inputLuz" />
+		<br />
+		<span>Informe a bandeira tarifária atual da companhia de energia</span>
+		<input type="text" id="inputBandeira" />
+		<br />
+		<span>Informe o consumo de água do mês (em litros)</span>
+		<input type="number" id="inputAgua" />
+		<br />
+		<span>Informe a quantidade de vazamentos de água na casa</span>
+		<input type="number" id="inputVazamento" />
+		<br />
+		<span>Informe o volume de gás consumido (em litros)</span>
+		<input type="number" id="inputGas" />
+		<br />
+		<span>Informe o valor do plano de internet</span>
+		<input type="number" id="inputInternet" />
+		<br />
+		<span
+			>Informe se há uma linha telefonica vinculada ao plano de internet</span
+		>
+		<input type="text" id="inputTelefone" />
+		<br />
+		<button onclick="calculaDespesasFixas()">Calcular Despesas Fixas</button>
+		<br />
+		<div id="mostraExtrato"></div>
+	</body>
+</html>
+
+<script>
+	function calculaDespesasFixas() {
+		//Variaveis Luz
+		var consumoLuz = Number(inputLuz.value);
+		var bandeira = inputBandeira.value;
+		var custoLuz = 0;
+
+		//Variavies Agua
+		var consumoAgua = Number(inputAgua.value);
+		var consumoVazamento = Number(inputVazamento.value);
+		var custoAgua = 0;
+
+		//Variaveis Gas
+		var consumoGas = Number(inputGas.value);
+		var custoGas = 0;
+
+		//Variaveis Internet
+		var consumoInternet = Number(inputInternet.value);
+		var telefone = inputTelefone.value;
+		var custoInternet = 0;
+
+		//Variavel Global
+		var custoTotal = 0;
+
+		//Limpando a tela do Extrato
+		mostraExtrato.innerHTML = "";
+
+		//Calculos Luz
+		if (bandeira == "verde") {
+			custoLuz = consumoLuz * 0.75;
+		}
+		if (bandeira == "amarela") {
+			custoLuz = consumoLuz * 0.9;
+		}
+		if (bandeira == "vermelha") {
+			custoLuz = consumoLuz * 1;
+		}
+		if (consumoLuz <= 50) {
+			custoLuz = custoLuz * 0.9;
+		}
+
+		//Calculos Agua
+		custoAgua = consumoAgua * 3.5;
+		custoAgua += consumoVazamento * 10;
+
+		//Calculos Gas
+		custoGas = consumoGas * 2.5;
+
+		//Calculos Internet
+		custoInternet = consumoInternet;
+		if (telefone == "sim") {
+			custoInternet += custoInternet * 0.25;
+		}
+
+		//Calculo do Custo Total
+		custoTotal = custoLuz + custoAgua + custoGas + custoInternet;
+
+		mostraExtrato.innerHTML += `Com o consumo de ${consumoLuz} kWh na bandeira ${bandeira}, a conta de energia totaliza R$ ${custoLuz}.
+
+    <br />Com o consumo de ${consumoAgua} litros de água contendo ${consumoVazamento} vazamentos e a taxa de saneamento, a conta de água totaliza R$ ${custoAgua}.
+
+    <br />Com o consumo de ${consumoGas} metros cúbicos de gás, a conta de gás totaliza R$ ${custoGas}.
+
+    <br />Com um valor base de R$ ${consumoInternet} no plano de internet , a conta de internet/telefone totaliza R$ ${custoInternet}.
+
+    <br />Gasto total de despesas mensal: R$ ${custoTotal}.`;
+	}
+</script>
