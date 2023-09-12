@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<span>Insira a nota 01</span>
+		<input type="number" id="inputNota01" />
+		<br />
+		<span>Insira a nota 02</span>
+		<input type="number" id="inputNota02" />
+		<br />
+		<button onclick="verificarSituacao()">Verificar Situação</button>
+		<br />
+		<div id="mostraResultado"></div>
+	</body>
+</html>
+
+<script>
+	function verificarSituacao() {
+		var nota01 = Number(inputNota01.value);
+		var nota02 = Number(inputNota02.value);
+		var media = (nota01 + nota02) / 2;
+
+		if (media >= 6) {
+			mostraResultado.innerHTML = `Parabéns, aprovado!`;
+		}
+		if (media < 6) {
+			mostraResultado.innerHTML = `Tente outra vez...`;
+		}
+	}
+</script>

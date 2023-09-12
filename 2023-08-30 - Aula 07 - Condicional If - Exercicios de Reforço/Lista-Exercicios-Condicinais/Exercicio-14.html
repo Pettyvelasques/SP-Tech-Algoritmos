@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<span>Nome do passageiro</span>
+		<input type="text" id="inputNome" />
+		<br />
+		<span>Distancia da viagem</span>
+		<input type="number" id="inputDistancia" />
+		<br />
+		<span>Bandeira tarifária</span>
+		<input type="number" id="inputBandeira" />
+		<br />
+		<span>Horario da corrida</span>
+		<input type="number" id="inputHorario" />
+		<br />
+		<button onclick="calcularTarifa()">Calcular Corrida</button>
+		<br />
+		<div id="mostraTarifa"></div>
+	</body>
+</html>
+
+<script>
+	function calcularTarifa() {
+		var nome = inputNome.value;
+		var distancia = Number(inputDistancia.value);
+		var horario = Number(inputHorario.value);
+		var bandeira = Number(inputBandeira.value);
+		var tarifaFixa = distancia * 1.25;
+		var tarifaPorcentagem = tarifaFixa * ((bandeira * 5) / 100);
+		var tarifaFinal = 0;
+
+		mostraTarifa.innerHTML = ``;
+		tarifaFinal += tarifaFixa;
+		if (horario >= 0) {
+			tarifaFinal += tarifaPorcentagem;
+		}
+
+		if (horario >= 7) {
+			tarifaFinal += tarifaPorcentagem;
+		}
+
+		if (horario >= 13) {
+			tarifaFinal += tarifaPorcentagem;
+		}
+
+		mostraTarifa.innerHTML += `Olá ${nome}.<br /> Sua corrida, será na bandeira ${bandeira}, percorrerá ${distancia} km e o total da corrida será de ${tarifaFinal}`;
+	}
+</script>

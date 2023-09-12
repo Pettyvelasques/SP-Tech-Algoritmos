@@ -1,0 +1,145 @@
+7. Criar um programa que auxilie o Banco XPTO a identificar quem entrou no cheque especial.
+a) Solicite o saldo da conta;
+b) Solicite o valor do débito (ou seja, valor a tirar da conta);
+c) Ao clicar em "Analisar conta", calcule o novo saldo da conta e exiba a mensagem "o saldo atual da conta corrente é xx". Esta frase deverá estar em negrito e em vermelho somente se o saldo for menor que zero.
+
+
+
+(ENTREGAR) 8. Crie um programa que controle o peso médio dentro de um elevador:
+
+a) Solicite a quantidade de homens que entraram no elevador
+b) Solicite a quantidade de mulher que entraram no elevador
+c) Ao clicar em "Analisar peso", calcule o peso estimado sendo: homens x 80 somado com mulheres x 60
+d) Exiba na página a mensagem "Este elevador suporta 800 Kg e o peso estimado desta lotação é de xxxkg";
+e) Se o peso estimado for maior que 800, exibir também a mensagem "Será necessário descer alguém para que o elevador se movimente", na cor azul.
+
+
+
+9. Estima-se que os usuários de conteúdo de Streaming gastem cerca de 100 milhões de horas por dia nesse tipo de entretenimento.
+Em média um episódio de seriado americano do estilo SITCOM (Friends, How I Met Your Mother, Dois Homens e Meio, etc.) tem 22min de duração.
+Sabendo disso, crie um programa o qual:
+a) Peça ao usuário para informar a última série (SITCOM) que ele assistiu.
+b) Peça ao usuário para informar o total de episódios que ele já assistiu da série.
+c) Tenha um botão "Verificar nível" que exiba abaixo dele a seguinte frase:
+
+
+"Vejo que você gosta da série X"
+
+
+E se o usuário já gastou mais de 30 horas na série informada, exiba também: "Uau, você realmente gosta dessa série!".
+
+Obs* Considere 22min como o tempo de duração de 1 episódio.
+
+
+
+10. Faça um programa o qual:
+
+ a) Pergunte ao usuário o valor de seu saldo na conta do banco
+
+ b) Ao clicar num botão "Verificar finanças"...
+
+b.1) Caso o saldo em conta for igual a zero (==0), exiba esta frase na cor preta na tela: "Conta zerada".
+
+b.2) Caso o saldo seja negativo (<0), exiba esta frase na cor vermelha na tela: "Está devendo!".
+
+b.3) Caso o saldo seja positivo (>0), exiba esta frase na cor azul: "Saldo positivo! sorriso"
+
+
+
+(ENTREGAR ) 11. Crie um programa o qual:
+
+a) Solicite a quantidade de filhos que o usuário tem
+
+b) Tenha um botão "Analisar família". Ao clicar nele...
+
+c) Caso tenha 1 ou mais filhos, exiba na tela, abaixo do botão, a frase
+
+Não tem TV
+
+d) Caso tenha 2 ou mais filhos, exiba na tela, abaixo da frase em c), a frase
+
+Não tem internet
+
+e) Caso tenha 3 ou mais filhos, exiba na tela, abaixo da frase em d), a frase
+
+Não tem video game
+
+f) Caso tenha 4 ou mais filhos, exiba na tela, abaixo da frase em e), a frase
+
+Não tem Netflix
+
+OBS: Ou seja, caso o usuário informe que tenha, por exemplo 4 ou mais filhos, devem aparecer as seguintes frases:
+
+   Não tem TV
+
+   Não tem internet
+
+   Não tem video game
+
+   Não tem Netflix
+
+Se tiver até 3 filhos, só não aparece a última frase, do Netflix
+
+
+
+12. Crie um programa o qual:
+
+a) Solicite o peso total num elevador;
+
+b) Ao clicar num botão "Ligar elevador":
+
+c) Caso o peso seja menor que 500, exiba um alert com a frase "Elevador vai se mover"
+
+d) Caso o peso seja a partir de 500, exiba um alert com "Alguém precisa descer do elevador"
+
+
+
+13. Crie um programa o qual:
+
+a) Solicite 2 notas de um aluno;
+
+b) Ao clicar em "Verificar situação", calcule sua média e...
+
+c) Caso a média seja a partir de 6, exiba um alert com "Parabéns, aprovado!"
+
+d) Caso a média seja menor que 6, exiba um alert com "Tente outra vez..."
+
+14. Agostinho é um taxista do Rio de Janeiro que deseja automatizar sua frota de táxis (Carrara Drivers). Faça um programa em HTML/JS que:
+
+a) Tenha um campo para nome do passageiro;
+b) Tenha um campo para a distância (em km) do local atual para o destino do passageiro;
+c) Tenha um campo - que só aceita número - que recebe a informação da bandeira da corrida (o valor deve ser apenas 1, 2 ou 3);
+
+c.1) Este campo só pode aceitar números e valores entre 1 e 3;
+d) Tenha um campo que recebe o horário da corrida (sistema de 24 horas e somente horas inteiras);
+d.1) Este campo só pode aceitar números e valores entre 0 e 23;
+e) Ao clicar em "Calcular corrida", informe ao passageiro o valor final da corrida, com uma frase assim:
+
+"Olá NOME Sua corrida, será na bandeira X, percorrerá Y km e o total da corrida será de Z"
+
+e.1) Siga a tabela abaixo para calcular o adicional por bandeira e horário:
+
+Obs: O valor nominal da corrida é de R$ 1,25 por km;
+
+Bandeira 1	0h - 6h	5%
+7h - 12h	10%
+13h - 23h	15%
+Bandeira 2	0h - 6h	10%
+7h - 12h	20%
+13h - 23h	30%
+Bandeira 3	0h - 6h	15%
+7h - 12h	30%
+13h - 23h	45%
+
+Exemplos, para teste:
+
+Distância(km)	Bandeira	Horário	Total
+10	            1	      14	      14,375
+20	            2	      15    	32,5
+30            	3	      16    	54,375
+40	            1	      17    	57,5
+50	            2	      18    	81,25
+60	            3	      19    	108,75
+70	            1	      20    	100,625
+80	            2	      21    	130
+
