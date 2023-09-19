@@ -1,0 +1,45 @@
+14. Agostinho é um taxista do Rio de Janeiro que deseja automatizar sua frota de táxis (Carrara Drivers). Faça um programa em HTML/JS que:
+
+a) Tenha um campo para nome do passageiro;
+
+b) Tenha um campo para a distância (em km) do local atual para o destino do passageiro;
+
+c) Tenha um campo - que só aceita número - que recebe a informação da bandeira da corrida
+c.1) Este campo só pode aceitar números e valores entre 1 e 3;
+
+d) Tenha um campo que recebe o período em que a corrida ocorreu
+    (sistema de períodos, onde cada periodo corresponde a 06 horas, por exemplo:
+    - Periodo 6 ( das 01h as 06h)
+    - Periodo 12 ( das 07h as 12h)
+    - Periodo 18 ( das 13h as 18h)
+    - Periodo 24 ( das 19h as 24h)
+    );
+d.1) Este campo só pode aceitar números e os valores 6, 12, 18 e 24;
+
+e) Ao clicar em "Calcular corrida", informe ao passageiro o valor final da corrida, com uma frase assim:
+
+"Olá NOME Sua corrida, será na bandeira X, percorrerá Y km e o total da corrida será de Z"
+
+e.1) Siga a tabela abaixo para calcular o adicional por bandeira e horário:
+
+O valor nominal da corrida é de R$ 1,25 por km;
+Obs: O exercicio deve ser desenvolvido utilizando o minimo de If's possível.
+
+
+Bandeira 1
+01h - 06h	5%
+07h - 12h	10%
+13h - 18h	15%
+19h - 24h   20%
+
+Bandeira 2
+01h - 06h	10%
+07h - 12h	20%
+13h - 18h	30%
+19h - 24h   40%
+
+Bandeira 3
+01h - 06h	15%
+07h - 12h	30%
+13h - 18h	45%
+19h - 24h   60%

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body></body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<span>Quantos homens entraram no elevador?</span>
+		<input type="number" id="qntHomens" />
+		<br />
+		<span>Quantas mulheres entraram no elevador?</span>
+		<input type="number" id="qntMulheres" />
+		<br />
+		<button onclick="calcularCarga()">Ligar Elevador</button>
+		<br />
+		<div id="mostraResultado"></div>
+	</body>
+</html>
+
+<script>
+	function calcularCarga() {
+		var homens = Number(qntHomens.value);
+		var mulheres = Number(qntMulheres.value);
+		var peso = homens * 90 + mulheres * 70;
+
+		if (peso <= 500) {
+			mostraResultado.innerHTML = `</br><span style="color: green">Elevador vai se mover, pois está com ${peso}kg.</span>`;
+		} else {
+			mostraResultado.innerHTML += `<br /><span style="color:red"/>Alguém precisa descer. Precisa perder ${
+				peso - 500
+			} para mover o elevador</span>`;
+		}
+	}
+</script>

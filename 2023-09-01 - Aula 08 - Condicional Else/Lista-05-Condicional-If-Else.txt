@@ -1,0 +1,109 @@
+1. Criar um programa que auxilie uma Autoescola a identificar possíveis novos alunos.
+
+a) Solicite o nome e a idade de uma pessoa;
+
+b) Ao clicar no botão "Avaliar aluno", se a pessoa tiver 18 anos ou mais emita a mensagem "FULANO vamos tirar a CNH?", caso contrário emita a mensagem "FULANO vai jogar PlayStation!";
+
+
+
+2. Criar um programa que auxilie o Banco XPTO a identificar quem entrou no cheque especial.
+
+a) Solicite o saldo da conta
+
+b) Solicite o valor do débito (ou seja, valor a tirar da conta)
+
+c) Ao clicar em "Analisar conta", calcule o novo saldo da conta e exiba a mensagem "o saldo atual da conta corrente é "XX". Esta frase deverá estar em negrito e em vermelho somente se o saldo for menor que zero ou em itálico e azul caso o saldo for 0 ou mais.
+
+
+
+(ENTREGAR) 3. O Mercado BOM DOCE está em promoção, qualquer chocolate custa R$ 3,00 cada e se a compra for acima de uma dúzia de chocolates o preço cai para R$ 2,50 cada um. Criar um programa que auxilie o Mercado a calcular o valor da compra de chocolate
+
+a) Solicite a quantidade de chocolates comprados;
+
+b) Após clicar num botão "Compra", exiba a mensagem "o valor da sua compra foi de XXX".
+
+
+
+(ENTREGAR) 4. Crie um programa o qual:
+
+a) Solicita a frequência do aluno
+
+b) Ao clicar em "Analisar frequência", deve aparecer, abaixo dele:
+
+  A imagem de um turista, caso a frequência for menor que 50 OU
+
+
+
+  A imagem de um aluno estudioso, caso a frequência for a partir de 50
+
+
+
+5. Crie um programa o qual:
+
+a) Solicite 2 notas de um aluno
+
+b) Ao clicar em "Verificar situação", calcule sua média e...
+
+c) Caso a média seja a partir de 6, exiba "Parabéns, aprovado!"
+
+d) Caso a média seja menor que 6, exiba "Tente outra vez..."
+
+
+
+(ENTREGAR) 6. Crie um programa o qual:
+
+a) Solicita a temperatura do ambiente
+
+b) Ao clicar em "Verificar clima", determine se o clima está:
+
+   Apropriada p/ conservar alimento - Caso a temperatura for menor que 10
+
+   Inapropriada p/ conservar alimento - Caso a temperatura for a partir de 10
+
+c) Em caso de temperatura apropriada, exiba a figura de um alimento em bom estado. Caso contrário, exiba a imagem de um alimento estragado
+
+
+
+7. Refazer os exercícios 5, 10 da lista anterior usando a estrutura “if else”.
+
+
+
+8. Crie um programa o qual:
+
+a) Solicite a quantidade de homens e mulheres num elevador
+
+b) Ao clicar num botão "Ligar elevador", calcule o peso total no elevador, considerando que um homem pesa em média 90kg e uma mulher 70kg
+
+c) Caso o peso seja até 500, exiba uma frase na cor verde abaixo do botão com a frase Elevador vai se mover, pois está com Xkg
+
+d) Caso o peso seja maior que 500, exiba uma frase na cor vermelha abaixo do botão com a frase Alguém precisa descer. Precisa perder Xkg para mover o elevador
+
+
+
+(ENTREGAR) 9. Crie um programa o qual:
+
+a) Pergunte ao usuário qual sua meta de economia
+
+b) Pergunte ao usuário quanto tem guardado
+
+c) Ao clicar em "Analisar economia"...
+
+d) Caso a meta tenha sido alcançada ou ultrapassada, exibir, abaixo do botão, a frase Parabéns, meta alcançada!. Caso a meta tenha sido ultrapassada, exibir também a frase Meta ultrapassada em X (onde X é a diferença entre a economia e a meta)
+
+e) Caso a meta ainda não tenha sido alcançada, exibir, abaixo do botão, a frase Força! Ainda em busca da meta! Falta X (onde X é a diferença entre a meta e a economia)
+
+
+
+
+
+(ENTREGAR) 10. Agora você é o professor!
+
+a) Crie um enunciado de questão que utilize dos conceitos abordados até agora.
+
+b) Escolha um colega e passe o desafio pra ele fazer a solução do enunciado.
+
+c) E você deve resolver o enunciado que algum outro colega elaborou.
+
+d) Ao final das soluções, o dono do enunciado deve corrigir a solução apresentada pelo colega e vice-versa.
+
+OBS: crie um arquivo HTML contendo o enunciado que você criou e faça o upload somente do enunciado, contendo o nome do colega que você desafiou.

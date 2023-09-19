@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<span>Qual a sua frequencia?</span>
+		<br />
+		<input type="number" id="inputFreq" />
+		<br />
+		<button onclick="calcularFreq()">Analisar Frequência</button>
+		<br />
+		<div id="mostraResultado"></div>
+	</body>
+</html>
+
+<script>
+	function calcularFreq() {
+		var frequencia = Number(inputFreq.value);
+
+		if (frequencia >= 50) {
+			mostraResultado.innerHTML = `<img
+				src="https://st4.depositphotos.com/1258191/24214/i/450/depositphotos_242147866-stock-photo-senior-academic-professor-reading-an.jpg"
+				style="height: 250px" />`;
+		} else {
+			mostraResultado.innerHTML = `<img
+				src="https://thumbs.dreamstime.com/b/turista-da-senhora-com-trouxa-39662677.jpg"
+				style="height: 250px" />`;
+		}
+	}
+</script>

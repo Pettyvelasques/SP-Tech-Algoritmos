@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=span, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<span>Insira a temperatura do ambiente</span>
+		<input type="number" id="inputTemp" />
+		<button onclick="verificarClima()">Verificar Clima</button>
+		<br />
+		<div id="mostraResultado"></div>
+	</body>
+</html>
+
+<script>
+	function verificarClima() {
+		var temperatura = Number(inputTemp.value);
+
+		if (temperatura >= 10) {
+			mostraResultado.innerHTML = `
+			<br/>
+			Inapropriada para conservar alimento!
+			<br/>
+			<br/>
+			<img src="https://media.istockphoto.com/id/1139305000/pt/foto/rotting-fruit-and-vegetables.jpg?s=612x612&w=0&k=20&c=xcgB_hbZWavt0uF0qvqvPw9B0YF1qcY4pLhOVqSF2MI=">`;
+		} else {
+			mostraResultado.innerHTML = `
+			<br/>
+			Apropriada para conservar alimento!
+			<br/>
+			<br/>
+			<img src="https://www.portaldoagronegocio.com.br/img/cache/cover//storage/images/notices/642b92cc84e32.jpg">`;
+		}
+	}
+</script>
