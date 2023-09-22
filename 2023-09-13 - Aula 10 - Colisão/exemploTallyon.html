@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Colisão</title>
+	</head>
+	<body>
+		<h2>Retângulo 1</h2>
+		<br />
+		X0 <input type="number" id="input_r1_x0" /><br /><br />
+		Y0 <input type="number" id="input_r1_y0" /><br /><br />
+		X1 <input type="number" id="input_r1_x1" /><br /><br />
+		Y1 <input type="number" id="input_r1_y1" /><br /><br />
+		<h2>Retângulo 2</h2>
+		<br />
+		X0 <input type="number" id="input_r2_x0" /><br /><br />
+		Y0 <input type="number" id="input_r2_y0" /><br /><br />
+		X1 <input type="number" id="input_r2_x1" /><br /><br />
+		Y1 <input type="number" id="input_r2_y1" /><br /><br />
+		<button onclick="Resultado()">Ver Resultado</button><br /><br />
+		<div id="div_mostrar"></div>
+	</body>
+</html>
+<script>
+	function Resultado() {
+		var r1x0 = Number(input_r1_x0.value);
+		var r1y0 = Number(input_r1_y0.value);
+		var r1x1 = Number(input_r1_x1.value);
+		var r1y1 = Number(input_r1_y1.value);
+		var r2x0 = Number(input_r2_x0.value);
+		var r2y0 = Number(input_r2_y0.value);
+		var r2x1 = Number(input_r2_x1.value);
+		var r2y1 = Number(input_r2_y1.value);
+
+		var resultado = "Colisão";
+		if (r2x0 > r1x1) {
+			resultado = "Não Colisão";
+		}
+		if (r2y0 > r1y1) {
+			resultado = "Não Colisão";
+		}
+		if (r2x1 < r1x0) {
+			resultado = "Não Colisão";
+		}
+		if (r2y1 < r1y0) {
+			resultado = "Não Colisão";
+		}
+		div_mostrar.innerHTML = `${resultado}`;
+	}
+</script>

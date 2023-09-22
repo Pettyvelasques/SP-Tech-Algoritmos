@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<span>Insira as coordenadas do retangulo 01</span>
+		<br />
+		<span>P1X0</span>
+		<input type="number" id="input1X0" />
+		<br />
+		<span>P1Y0</span>
+		<input type="number" id="input1Y0" />
+		<br />
+		<span>P1X1</span>
+		<input type="number" id="input1X1" />
+		<br />
+		<span>P1Y1</span>
+		<input type="number" id="input1Y1" />
+		<br />
+		<br />
+		<span>------------</span>
+		<br />
+		<br />
+		<span>Insira as coordenadas do retangulo 02</span>
+		<br />
+		<span>P2X0</span>
+		<input type="number" id="input2X0" />
+		<br />
+		<span>P2Y0</span>
+		<input type="number" id="input2Y0" />
+		<br />
+		<span>P2X1</span>
+		<input type="number" id="input2X1" />
+		<br />
+		<span>P2Y1</span>
+		<input type="number" id="input2Y1" />
+		<br />
+		<br />
+		<button onclick="verificaColisao()">Verificar Colisão</button>
+		<br />
+		<div id="mostraResultado"></div>
+	</body>
+</html>
+
+<script>
+	function verificaColisao() {
+		var p1x0 = Number(input1X0.value);
+		var p1y0 = Number(input1Y0.value);
+		var p1x1 = Number(input1X1.value);
+		var p1y1 = Number(input1Y1.value);
+
+		var p2x0 = Number(input2X0.value);
+		var p2y0 = Number(input2Y0.value);
+		var p2x1 = Number(input2X1.value);
+		var p2y1 = Number(input2Y1.value);
+
+		mostraResultado.innerHTML = "";
+
+		if (p2x0 >= p1x0) {
+			if (p2x0 <= p1x1) {
+				if (p2y0 >= p1y0) {
+					if (p2y0 <= p1y1) {
+						mostraResultado.innerHTML += `Colidiu 01 D-C`;
+					}
+				}
+				if (p2y1 >= p1y0) {
+					if (p2y1 <= p1y1) {
+						mostraResultado.innerHTML += `Colidiu 02 D-B`;
+					}
+				}
+			}
+		}
+		if (p2x1 >= p1x0) {
+			if (p2x1 <= p1x1) {
+				if (p2y1 >= p1y0) {
+					if (p2y1 <= p1y1) {
+						mostraResultado.innerHTML += `Colidiu 03 E-B`;
+					}
+				}
+				if (p2y0 >= p1y0) {
+					if (p2y0 <= p1y1) {
+						mostraResultado.innerHTML += `Colidiu 04 E-C`;
+					}
+				}
+			}
+		}
+		mostraResultado.innerHTML += `fim`;
+	}
+</script>

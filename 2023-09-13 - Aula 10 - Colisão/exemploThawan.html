@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8" />
+		<title>Glam Costa</title>
+	</head>
+	<body>
+		<input id="X0A" />
+		<br /><br />
+		<input id="Y0A" />
+		<br /><br />
+		<input id="X1A" />
+		<br /><br />
+		<input id="Y1A" />
+		<br /><br />
+		<input id="X0B" />
+		<br /><br />
+		<input id="Y0B" />
+		<br /><br />
+		<input id="X1B" />
+		<br /><br />
+		<input id="Y1B" />
+		<br />
+		<br />
+
+		<button onclick="colisao()">Verificar colisão</button>
+	</body>
+</html>
+<script>
+	function colisao() {
+		//r1
+		var x0a = Number(X0A.value);
+		var y0a = Number(Y0A.value);
+		var x1a = Number(X1A.value);
+		var y1a = Number(Y1A.value);
+
+		var larguraA = x1a - x0a;
+		var largTotA = x1a;
+		var alturaA = y1a - y0a;
+
+		//r2
+		var x0b = Number(X0B.value);
+		var y0b = Number(Y0B.value);
+		var x1b = Number(X1B.value);
+		var y1b = Number(Y1B.value);
+
+		var larguraB = x1b - x0b;
+		var largTotB = x1b;
+		var alturaB = y1b - y0b;
+
+		var n = 0;
+
+		if (x0a <= x0b + alturaB) {
+			n += 1;
+			//alert("n1");
+			if (x1a >= x0b) {
+				n += 1;
+				//alert("n2");
+				if (y0a <= y0b + alturaB) {
+					n += 1;
+					//alert("n3");
+					if (y1a >= y0b) {
+						n += 1;
+						//alert("n4");
+					}
+				}
+			}
+		}
+
+		if (n == 4) {
+			alert("colisão");
+		} else {
+			alert("Sem colisão");
+		}
+	}
+</script>
