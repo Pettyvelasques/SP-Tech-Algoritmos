@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<span>Digite seu login</span>
+		<input type="text" id="inputLogin" />
+		<br />
+		<span>Digite sua senha</span>
+		<input type="password" id="inputSenha" />
+		<br />
+		<span>Digite seu código de segurança</span>
+		<input type="password" id="inputCodigo" />
+		<br />
+		<button onclick="verificaAcesso()">Verifica Acesso</button>
+		<br />
+	</body>
+</html>
+
+<script>
+	var loginFixo = "SPTech";
+	var senhaFixa = "digital";
+	var codigoFixo = "123";
+
+	function verificaAcesso() {
+		var login = inputLogin.value;
+		var senha = inputSenha.value;
+		var codigo = inputCodigo.value;
+
+		if (login == loginFixo && senha == senhaFixa && codigo == codigoFixo) {
+			alert("Usuário autenticado com sucesso");
+		} else {
+			alert("Falha na autenticação");
+		}
+	}
+</script>
