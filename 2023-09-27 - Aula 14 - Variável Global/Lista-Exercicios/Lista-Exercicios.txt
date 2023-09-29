@@ -1,0 +1,35 @@
+1) Crie um programa em HTML/JS o qual:
+a) Tenha na tela uma figura qualquer
+b) Abaixo da figura, 2 botões: "Aumentar a largura" e "Reduzir a largura"
+c) Ao clicar no primeiro botão, aumente a largura da imagem em 10px
+d) Ao clicar no segundo botão, reduza a largura da imagem em 10px
+
+
+
+2) Crie um programa em HTML/JS o qual:
+a) Pergunte qual o salário do usuário
+b) Tenha um botão "Confirmar salário". Ao ser clicado, ele deixe aparecendo na tela uma frase assim "Grana atual: R$X"
+c) Tenha um botão "Pagar conta de 100", que, ao ser clicado, ele reduza a "Grana atual" em 100 e atualize essa informação na tela
+d) Tenha um botão "Pagar conta de 500", que, ao ser clicado, ele reduza a "Grana atual" em 500 e atualize essa informação na tela
+e) Tenha um botão "Ganhar 2000 na loteria", que, ao ser clicado, ele aumente a "Grana atual" em 2000 e atualize essa informação na tela
+
+
+3) Tio Patinhas está ensinando seus netos a guardar dinheiro; Ajude-o criando um programa em HTML/JS o qual:
+a) Exiba na tela, logo de início, na cor azul:
+Total guardado no cofrinho: R$0
+Depósitos efetuados: 0
+Retiradas efetuadas: 0
+b) Ao clicar num botão "Depositar 0,50", o valor depositado aumente em R$0,50 e a quantidade de depósitos aumente em 1. Atualize essas informações na tela;
+c) Ao clicar num botão "Depositar 2,00", o valor depositado aumente em R$2,00 e a quantidade de depósitos aumente em 1. Atualize essas informações na tela;
+d) Ao clicar num botão "Retirar 0,50" o valor depositado é diminuído em R$0,50 e a quantidade de retiradas aumenta em 1. Atualize essas informações na tela;
+e) Ao clicar num botão "Retirar" o valor depositado é diminuído de acordo com o campo "Valor", disponível na tela.
+
+
+
+4) Crie um programa em HTML/JS o qual:
+a) Tenha, no topo da página os botões "Mover p/ Esquerda" e "Mover p/ Direita", lado a lado
+b) Ao lado dos botões, uma caixa de entrada de texto com a indicação "Quantos pixels"
+c) Abaixo de tudo isso uma figura do Bart Simpson num skate
+d) Ao clicar no "Mover p/ Esquerda", a figura do Bart se move para a esquerda em X pixels, conforme o valor da caixa de entrada de texto
+e) Ao clicar no "Mover p/ Direita", a figura do Bart se move para a direita em X pixels, conforme o valor da caixa de entrada de texto
+#FicaDica: Use a propriedade de estilo "margin-left", a qual, via Javascript é acessível com "marginLeft".

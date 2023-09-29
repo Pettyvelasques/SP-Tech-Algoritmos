@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<br />
+		<button onclick="left()">Mover para Esquerda</button>
+		<button onclick="right()">Mover para Direita</button>
+		<br />
+		<span>Mover quantos pixels?</span>
+		<input type="number" id="inputPixels" />
+		<br />
+		<br />
+		<div id="mostrarResultado">
+			<img
+				src="https://i.pinimg.com/originals/a2/08/f9/a208f977712baa2399ceff1564d9fa57.gif"
+				style="
+					height: 200px;
+					margin-left: 0px;
+					transform: rotateY(0deg);
+					transition: 1s;
+				"
+				id="image" />
+		</div>
+	</body>
+</html>
+
+<script>
+	var imgMargin = 0;
+	var y = 0;
+
+	function left() {
+		var quantPixel = Number(inputPixels.value);
+		y = 180;
+		imgMargin -= quantPixel;
+		image.style.margin = `0px 0px 0px ${imgMargin}px`;
+		image.style.transform = `rotateY(${y}deg)`;
+	}
+	function right() {
+		var quantPixel = Number(inputPixels.value);
+		y = 0;
+		imgMargin += quantPixel;
+		image.style.margin = `0px 0px 0px ${imgMargin}px`;
+		image.style.transform = `rotateY(${y}deg)`;
+	}
+</script>

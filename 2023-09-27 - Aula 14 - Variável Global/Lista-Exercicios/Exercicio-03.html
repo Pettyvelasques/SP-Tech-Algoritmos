@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div id="mostrarResultado" style="color: blue">
+			<h3>
+				<div id="divSaldo">Total guardado no cofrinho: R$0,00</div>
+				<br />
+				<div id="divDep">Depósitos efetuados: 0</div>
+				<br />
+				<div id="divRet">Retiradas efetuadas: 0</div>
+			</h3>
+		</div>
+		<br />
+		<button onclick="add50()">Depositar R$0,50</button><span></span>
+		<button onclick="add200()">Depositar R$2,00</button>
+		<br />
+		<br />
+		<button onclick="rem50()">Retirar R$0,50</button>
+		<br />
+		<br />
+		<span>Quanto deseja retirar?</span>
+		<input type="number" id="inputRetirada" />
+		<br />
+		<button onclick="remX()">Retirar</button>
+		<br />
+		<br />
+	</body>
+</html>
+
+<script>
+	var saldo = 0;
+	var depositos = 0;
+	var retiradas = 0;
+
+	function add50() {
+		saldo += 0.5;
+		depositos++;
+		divSaldo.innerHTML = `Total guardado no cofrinho: R$${saldo}`;
+		divDep.innerHTML = `Depósitos efetuados: ${depositos}`;
+	}
+
+	function add200() {
+		saldo += 2;
+		depositos++;
+		divSaldo.innerHTML = `Total guardado no cofrinho: R$${saldo}`;
+		divDep.innerHTML = `Depósitos efetuados: ${depositos}`;
+	}
+
+	function rem50() {
+		saldo -= 0.5;
+		retiradas++;
+		divSaldo.innerHTML = `Total guardado no cofrinho: R$${saldo}`;
+		divRet.innerHTML = `Retiradas efetuadas: ${retiradas}`;
+	}
+
+	function remX() {
+		var valorRetirada = Number(inputRetirada.value);
+		saldo -= valorRetirada;
+		retiradas++;
+		divSaldo.innerHTML = `Total guardado no cofrinho: R$${saldo}`;
+		divRet.innerHTML = `Retiradas efetuadas: ${retiradas}`;
+	}
+</script>

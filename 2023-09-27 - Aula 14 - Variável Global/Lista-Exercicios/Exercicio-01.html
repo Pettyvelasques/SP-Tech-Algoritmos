@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<br />
+		<button onclick="plus()">Ampliar Zoom</button>
+		<br />
+		<br />
+		<button onclick="minus()">Reduzir Zoom</button>
+		<br />
+		<br />
+		<div id="mostrarResultado">
+			<img
+				src="https://www.thunderbike.com/wp-content/uploads/2020/10/0552961-1-von-46-545x364.jpg"
+				style="height: 200px"
+				id="image" />
+		</div>
+	</body>
+</html>
+
+<script>
+	var imgHeight = 200;
+	function plus() {
+		imgHeight += 10;
+		image.style.height = `${imgHeight}px`;
+	}
+	function minus() {
+		imgHeight -= 10;
+		image.style.height = `${imgHeight}px`;
+	}
+</script>
